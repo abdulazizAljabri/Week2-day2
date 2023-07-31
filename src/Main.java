@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // First Example form Class Account ...
+        // First Example form Class Account ....
         try {
             Account accountOne = new Account();
             Account accountTwo = new Account("12", "ail", 200);
@@ -47,29 +47,40 @@ public class Main {
 
         // Second Example form Class Employee...
 
-        Employee employeeOne = new Employee("10", "ail", 20000);
-        Employee employeeTwo = new Employee();
-        System.out.println(" Employee Name : ");
-        String name = input.nextLine();
-        employeeTwo.setName(name);
-        System.out.println(" Employee ID : ");
-        String id = input.nextLine();
-        employeeTwo.setId(id);
-        System.out.println(" Employee Salary : ");
-        int salary = input.nextInt();
-        employeeTwo.setSalary(salary);
-        System.out.println("-------------------");
-        System.out.println(" Enter the percentage of the employeeTwo salary increase: ");
-        int percentage = input.nextInt();
-        employeeTwo.raisedSalary(percentage);
-        System.out.println("The employeeTwo salary after increase is : " + employeeTwo.getSalary());
-        System.out.println("-------------------");
-        System.out.println(" Enter the percentage of the employeeOne salary increase: ");
-        percentage = input.nextInt();
-        employeeOne.raisedSalary(percentage);
-        System.out.println("The employeeOne salary after increase is : " + employeeOne.getSalary());
 
-        System.out.println(employeeOne.toString());
-        System.out.println(employeeTwo.toString());
+        try {
+            Employee employeeOne = new Employee("10", "ail", 20000);
+            Employee employeeTwo = new Employee();
+            System.out.println(" Employee Name : ");
+            String name = input.nextLine();
+            employeeTwo.setName(name);
+            System.out.println(" Employee ID : ");
+            String id = input.nextLine();
+            employeeTwo.setId(id);
+            System.out.println(" Employee Salary : ");
+            int salary = input.nextInt();
+            employeeTwo.setSalary(salary);
+            System.out.println("-------------------");
+            System.out.println(" Enter the percentage of the employeeTwo salary increase: ");
+            int percentage = input.nextInt();
+            employeeTwo.raisedSalary(percentage);
+            System.out.println("The employeeTwo salary after increase is : " + employeeTwo.getSalary());
+            System.out.println("-------------------");
+            System.out.println(" Enter the percentage of the employeeOne salary increase: ");
+            percentage = input.nextInt();
+            employeeOne.raisedSalary(percentage);
+            System.out.println("The employeeOne salary after increase is : " + employeeOne.getSalary());
+            System.out.println("-------------------");
+            System.out.println(" The employeeOne AnnualSalary is : " + employeeOne.getAnnualSalary());
+            System.out.println(" The employeeTwo AnnualSalary is : " + employeeTwo.getAnnualSalary());
+
+            System.out.println(employeeOne.toString());
+            System.out.println(employeeTwo.toString());
+        } catch (InputMismatchException e2) {
+            System.out.println(" Invalid Input ");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }

@@ -3,12 +3,12 @@ public class Employee {
     private String id;
     private int salary;
 
-    public Employee() {
-    }
     public Employee(String name, String id, int salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
+    }
+    public Employee() {
     }
 
     public String getName() {
@@ -35,13 +35,14 @@ public class Employee {
         this.salary = salary;
     }
     public int getAnnualSalary() {
-        return this.salary * 52;
+        return this.salary * 12;
     }
 
     public int raisedSalary(int percent) {
 
         return  this.salary = salary + (this.salary * percent / 100);
     }
+
 
     @Override
     public String toString() {
